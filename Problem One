@@ -1,0 +1,103 @@
+test_cases = int(input())
+
+n_m_qs = [] #string
+torns = [] #string
+readers_array = [] #string
+
+
+
+for i in range(test_cases):
+    n_m_q = input()
+    n_m_qs.append(n_m_q)
+    torn = input()
+    torns.append(torn)
+    readers = input()
+    readers_array.append(readers)
+    
+m_m_qs2 = []
+torns2 = []
+readers_array2 = []
+
+for el in n_m_qs:
+    el = list(map(int, el.split()))
+    n_m_qs2.append(el)
+    
+for el in torn:
+    el = list(map(int, el.split()))
+    torns2.append(el)
+    
+for el in readers_array:
+    el = list(map(int, el.split()))
+    readers_array2.append(el)
+    
+readed_pages = []
+
+for i in range(test_cases):
+    current_nmq = n_m_qs2[i]
+    current_torn_pages = torns2[i]
+    current_readers = readers_array2[i]test_cases = int(input())
+
+n_m_qs = [] #string
+torns = [] #string
+readers_array = [] #string
+
+
+
+for i in range(test_cases):
+    n_m_q = input()
+    n_m_qs.append(n_m_q)
+    torn = input()
+    torns.append(torn)
+    readers = input()
+    readers_array.append(readers)
+    
+m_m_qs2 = []
+torns2 = []
+readers_array2 = []
+
+for el in n_m_qs:
+    el = list(map(int, el.split()))
+    n_m_qs2.append(el)
+    
+for el in torn:
+    el = list(map(int, el.split()))
+    torns2.append(el)
+    
+for el in readers_array:
+    el = list(map(int, el.split()))
+    readers_array2.append(el)
+    
+readed_pages = []
+
+for i in range(test_cases):
+    current_nmq = n_m_qs2[i]
+    current_torn_pages = torns2[i]
+    current_readers = readers_array2[i]
+    total_pages = current_nmq[0]
+    book_list = list(range(1, total_pages+1))
+    book_list_upd = list(Counter(book_list) - Counter(current_torn_pages))
+    benchmark = max(book_list_apd)
+    for el in current_readers:
+        readed = list(range(el, benchmark+1, el))
+    	readed_pages.append(readed)
+    count = 0
+    for el in readed_pages:
+        result3 = list(set(book_list_upd) & set(el))
+        interm = len(result3)
+        count = count + interm
+    print("Case #",(i+1),": ",count)
+    
+    total_pages = current_nmq[0]
+    book_list = list(range(1, total_pages+1))
+    book_list_upd = list(Counter(book_list) - Counter(current_torn_pages))
+    benchmark = max(book_list_apd)
+    for el in current_readers:
+        readed = list(range(el, benchmark+1, el))
+    	readed_pages.append(readed)
+    count = 0
+    for el in readed_pages:
+        result3 = list(set(book_list_upd) & set(el))
+        interm = len(result3)
+        count = count + interm
+    print("Case #",(i+1),": ",count)
+    
